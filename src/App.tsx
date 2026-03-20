@@ -1,5 +1,7 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import imgLogo from './assets/logo.png'
+import imgHero from './assets/hero.png'
 
 // Figma assets (7日間有効 - 本番では静的ファイルに置き換え)
 const imgAppIcon = "https://www.figma.com/api/mcp/asset/edda23b9-be03-4d6c-bf6b-76d6dff979ba";
@@ -141,19 +143,14 @@ function App() {
             </div>
           </div>
 
-          {/* Hero Image Placeholder */}
+          {/* Hero Image */}
           <div className="relative max-w-4xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-b from-accent/20 to-warm/20 rounded-[2.5rem] blur-2xl transform scale-105" />
-            <div className="relative bg-gradient-to-br from-accent-light to-warm-light rounded-[2rem] p-1 shadow-lifted">
-              <div className="bg-background rounded-[1.75rem] aspect-[16/9] flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-accent/50 flex items-center justify-center">
-                    <span className="text-4xl">🏡</span>
-                  </div>
-                  <p className="text-text-muted">アプリのスクリーンショット</p>
-                </div>
-              </div>
-            </div>
+            <img
+              src={imgHero}
+              alt="nookの箱庭イメージ"
+              className="relative rounded-[2rem] shadow-lifted w-full"
+            />
           </div>
         </div>
       </section>
@@ -396,20 +393,20 @@ function App() {
           <p className="text-white/80 mb-10 text-lg">今日の予定を、小さな世界に</p>
 
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10">
-            <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">
+            <Link to="/contact" className="text-white/70 hover:text-white transition-colors duration-300">
               サポート・お問い合わせ
-            </a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">
+            </Link>
+            <Link to="/terms" className="text-white/70 hover:text-white transition-colors duration-300">
               利用規約
-            </a>
-            <a href="#" className="text-white/70 hover:text-white transition-colors duration-300">
+            </Link>
+            <Link to="/privacy" className="text-white/70 hover:text-white transition-colors duration-300">
               プライバシーポリシー
-            </a>
+            </Link>
           </nav>
 
           <div className="pt-8 border-t border-white/10">
             <p className="text-white/50 text-sm">
-              © 2025 Knot. All rights reserved.
+              © 2026 Knot. All rights reserved.
             </p>
           </div>
         </div>
