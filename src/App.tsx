@@ -275,7 +275,7 @@ function App() {
           <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
             {/* Image */}
             <div className="lg:col-span-7 order-2 lg:order-1">
-              <div className="relative">
+              <div className="relative max-w-sm mx-auto lg:max-w-none">
                 <div className="absolute -inset-4 bg-gradient-to-br from-accent/30 to-earth/30 rounded-[2.5rem] blur-2xl" />
                 <img
                   src={imgFeature3}
