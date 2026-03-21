@@ -1,7 +1,9 @@
 import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import imgLogo from './assets/logo.png'
-import imgHero from './assets/hero.png'
+import imgFeature1 from './assets/feature1.png'
+import imgFeature2 from './assets/feature2.png'
+import imgFeature3 from './assets/feature3.png'
 
 // Figma assets (7日間有効 - 本番では静的ファイルに置き換え)
 const imgAppIcon = "https://www.figma.com/api/mcp/asset/edda23b9-be03-4d6c-bf6b-76d6dff979ba";
@@ -143,14 +145,18 @@ function App() {
             </div>
           </div>
 
-          {/* Hero Image */}
+          {/* Hero Video */}
           <div className="relative max-w-4xl mx-auto">
             <div className="absolute inset-0 bg-gradient-to-b from-accent/20 to-warm/20 rounded-[2.5rem] blur-2xl transform scale-105" />
-            <img
-              src={imgHero}
-              alt="nookの箱庭イメージ"
-              className="relative rounded-[2rem] shadow-lifted w-full"
-            />
+            <div className="relative rounded-[2rem] shadow-lifted overflow-hidden aspect-video">
+              <iframe
+                src="https://www.youtube.com/embed/pzu5Sb9D3Q8"
+                title="nook - 予定が、あなたの世界になる"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -199,14 +205,11 @@ function App() {
             <div className="lg:col-span-7 order-2 lg:order-1">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-warm/30 to-accent/30 rounded-[2.5rem] blur-2xl" />
-                <div className="relative bg-white rounded-[2rem] p-3 shadow-lifted">
-                  <div className="bg-gradient-to-br from-warm-light to-accent-light rounded-[1.5rem] aspect-[4/3] flex items-center justify-center">
-                    <div className="text-center">
-                      <span className="text-6xl mb-4 block">🌤️</span>
-                      <p className="text-text-muted">箱庭イメージ</p>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src={imgFeature1}
+                  alt="箱庭イメージ"
+                  className="relative rounded-[2rem] shadow-lifted w-full"
+                />
               </div>
             </div>
 
@@ -253,14 +256,11 @@ function App() {
             <div className="lg:col-span-7">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-green/30 to-accent/30 rounded-[2.5rem] blur-2xl" />
-                <div className="relative bg-white rounded-[2rem] p-3 shadow-lifted">
-                  <div className="bg-gradient-to-br from-green-light to-accent-light rounded-[1.5rem] aspect-[4/3] flex items-center justify-center">
-                    <div className="text-center">
-                      <span className="text-6xl mb-4 block">🤝</span>
-                      <p className="text-text-muted">フレンド機能イメージ</p>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src={imgFeature2}
+                  alt="フレンド機能イメージ"
+                  className="relative rounded-[2rem] shadow-lifted w-full"
+                />
               </div>
             </div>
           </div>
@@ -277,14 +277,11 @@ function App() {
             <div className="lg:col-span-7 order-2 lg:order-1">
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-accent/30 to-earth/30 rounded-[2.5rem] blur-2xl" />
-                <div className="relative bg-white rounded-[2rem] p-3 shadow-lifted">
-                  <div className="bg-gradient-to-br from-accent-light to-earth-light rounded-[1.5rem] aspect-[4/3] flex items-center justify-center">
-                    <div className="text-center">
-                      <span className="text-6xl mb-4 block">🌧️</span>
-                      <p className="text-text-muted">天気連動イメージ</p>
-                    </div>
-                  </div>
-                </div>
+                <img
+                  src={imgFeature3}
+                  alt="天気連動イメージ"
+                  className="relative rounded-[2rem] shadow-lifted w-full"
+                />
               </div>
             </div>
 
